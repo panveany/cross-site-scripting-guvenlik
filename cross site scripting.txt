@@ -1,0 +1,35 @@
+<script>alert("byltc") </scripti>
+
+<?php
+htmlentities(urldecode($xss_guvenligiris));
+?>
+
+
+<?php
+$_GETS = array();
+// Get , metodu veri alma amacli kullaniliyor.
+$_POSTS = array();
+// Post metodu veriyi gonderme amacli kullanilmakta.
+foreach($_GET as $key => $value) {
+$_GETS[$key] = dataFilter($value, 5, 7);
+}
+foreach($_POST as $key => $value) {
+$_POSTS[$key] = dataFilter($value, 7, 5);
+}
+?>
+
+
+
+$_GETS = array();
+$_POSTS = array();
+
+
+
+foreach($_GET as $key => $value) {
+$_GETS[$key] = dataFilter($value, 5, 7);
+}
+
+
+foreach($_POST as $key => $value) {
+$_POSTS[$key] = dataFilter($value, 7, 5);
+}
